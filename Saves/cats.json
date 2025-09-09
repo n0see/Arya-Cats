@@ -1,0 +1,92 @@
+[
+	{
+		"body_color": "#FF5733",
+		"name": "W3R",
+		"pattern_color": "#C70039"
+	},
+	{
+		"body_color": "#FFC300",
+		"name": "Krover",
+		"pattern_color": "#FF5733"
+	},
+	{
+		"body_color": "a1a34c",
+		"name": "Arya",
+		"pattern_color": "dc6565"
+	},
+	{
+		"body_color": "723a18",
+		"name": "Milo",
+		"pattern_color": "a2ec0f"
+	},
+	{
+		"body_color": "3c0c14",
+		"name": "Oreo",
+		"pattern_color": "fdc607"
+	},
+	{
+		"body_color": "e1f2fd",
+		"name": "Bob",
+		"pattern_color": "ac0305"
+	},
+	{
+		"body_color": "789185",
+		"name": "Pumpkin",
+		"pattern_color": "947bea"
+	},
+	{
+		"body_color": "5762a5",
+		"name": "Harry",
+		"pattern_color": "7ec579"
+	},
+	{
+		"body_color": "13d29f",
+		"name": "Cleo",
+		"pattern_color": "8a586d"
+	},
+	{
+		"body_color": "aa8d09",
+		"name": "Coco",
+		"pattern_color": "d288ec"
+	},
+	{
+		"body_color": "3c3c7c",
+		"name": "Tia",
+		"pattern_color": "35cceb"
+	},
+	{
+		"body_color": "8bd04b",
+		"name": "Simba",
+		"pattern_color": "509741"
+	},
+	{
+		"body_color": "94926d",
+		"name": "Max",
+		"pattern_color": "aa7637"
+	},
+	{
+		"body_color": "b5aa77",
+		"name": "Fuzzy",
+		"pattern_color": "356252"
+	},
+	{
+		"body_color": "0ab673",
+		"name": "Major Tom",
+		"pattern_color": "124a4e"
+	},
+	{
+		"body_color": "042261",
+		"name": "Europe",
+		"pattern_color": "900da7"
+	},
+	{
+		"body_color": "cd2f22",
+		"name": "Oscar",
+		"pattern_color": "32a4ea"
+	},
+	{
+		"body_color": "b78f4a",
+		"name": "nosee",
+		"pattern_color": "ffffff"
+	}
+]

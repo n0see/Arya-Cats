@@ -1,0 +1,109 @@
+[gd_scene load_steps=3 format=3 uid="uid://bit4gv2e0q8pm"]
+
+[ext_resource type="Script" uid="uid://oe3ljq0b7hsp" path="res://Scripts/customize.gd" id="1_21qd2"]
+[ext_resource type="PackedScene" uid="uid://dthbjm02sydt2" path="res://Scenes/cat.tscn" id="1_in2lc"]
+
+[node name="customize" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+scale = Vector2(0.5, 0.5)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(14.3305, 13.2487)
+color = Color(0.370364, 0.370364, 0.370364, 1)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_21qd2")
+
+[node name="cat" parent="Control" instance=ExtResource("1_in2lc")]
+position = Vector2(419, 123)
+scale = Vector2(4.05, 4.05)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 51.0
+offset_right = 191.0
+offset_bottom = 248.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Body"
+
+[node name="BodyColorPickerButton" type="ColorPickerButton" parent="Control/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+color = Color(0.717647, 0.560784, 0.290196, 1)
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Pattern"
+
+[node name="PatternColorPickerButton" type="ColorPickerButton" parent="Control/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+color = Color(1, 1, 1, 1)
+
+[node name="Save" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+text = "Save"
+
+[node name="Delete" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+text = "Delete"
+
+[node name="Random" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+text = "Randomize"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Control"]
+layout_mode = 2
+offset_left = 295.0
+offset_top = 212.0
+offset_right = 549.0
+offset_bottom = 247.0
+
+[node name="Label" type="Label" parent="Control/HBoxContainer3"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Name"
+
+[node name="TextEdit" type="TextEdit" parent="Control/HBoxContainer3"]
+custom_minimum_size = Vector2(150, 0.115)
+layout_mode = 2
+text = "Add Name Here"
+scroll_fit_content_height = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control"]
+custom_minimum_size = Vector2(543.28, 140)
+layout_mode = 2
+offset_left = 27.0
+offset_top = 356.0
+offset_right = 570.28
+offset_bottom = 496.0
+
+[node name="GridContainer" type="GridContainer" parent="Control/ScrollContainer"]
+custom_minimum_size = Vector2(500, 128)
+layout_mode = 2
+columns = 8
+
+[connection signal="color_changed" from="Control/VBoxContainer/HBoxContainer/BodyColorPickerButton" to="Control" method="_on_body_color_picker_button_color_changed"]
+[connection signal="color_changed" from="Control/VBoxContainer/HBoxContainer2/PatternColorPickerButton" to="Control" method="_on_pattern_color_picker_button_color_changed"]
+[connection signal="pressed" from="Control/VBoxContainer/Save" to="Control" method="_on_save_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/Delete" to="Control" method="_on_delete_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/Random" to="Control" method="_on_random_pressed"]
