@@ -1,7 +1,7 @@
 
 # Arya Cats
 
-Pixelated customizable cars for twitch streams
+Pixelated customizable cats for twitch streams
 
 ## Deployment
 
