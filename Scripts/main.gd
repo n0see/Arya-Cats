@@ -1,9 +1,11 @@
 extends Node2D
-const SAVE_PATH = "res://Saves/cats.json"
+const SAVE_PATH = "cats.json"
 var newcat_scene = preload("res://Scenes/cat.tscn")
 var bounds = Vector2(0,400)
 
 func _ready() -> void:
+	check_json()
+	$customize/Control.refresh_cats_menu()
 	var cats = load_cats()
 	var save_button = $customize.find_child("Save")
 	save_button.pressed.connect(Callable(self, "_on_save_button_pressed"))
@@ -77,4 +79,35 @@ func delete_cat(cat_name):
 		if not cat.is_in_group("Cat"): continue 
 		if cat.cat_name == cat_name:
 			cat.queue_free()
+func check_json():
+	var file = FileAccess.open(SAVE_PATH, FileAccess.READ)
+	if not file:
+		print("cats.json not found, Creating new file.")
+		var defaultjson = [{
+			"body_color": "#FF5733",
+			"name": "W3R",
+			"pattern_color": "#C70039"
+		},
+		{
+			"body_color": "#FFC300",
+			"name": "Krover",
+			"pattern_color": "#FF5733"
+		},
+		{
+			"body_color": "a1a34c",
+			"name": "Arya",
+			"pattern_color": "dc6565"
+		}]
+		file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
+		if not file : 
+			var error_code = FileAccess.get_open_error()
+			print("Error opening file: ", error_code)
+			return
+		file.store_string(JSON.stringify(defaultjson))
+		file.close()
+		print("created a new file")
+		
+	
+	
+	
 	

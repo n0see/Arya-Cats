@@ -1,7 +1,7 @@
 extends Control
 
 @onready var Cat = $cat
-const SAVE_PATH = "res://Saves/cats.json"
+const SAVE_PATH = "cats.json"
 var mini_cat_scene = preload("res://Scenes/catmainmenu.tscn")
 const CAT_NAMES = [
 	"Poppy", "Bella", "Misty", "Molly", "Daisy", "Tilly", "Luna", "Lily",
